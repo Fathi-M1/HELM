@@ -1,0 +1,36 @@
+# dependencies & build output
+node_modules/
+build/
+dist/
+coverage/
+
+# secrets & env (keep only the template)
+.env*
+!.env.example
+
+# logs & OS files
+*.log
+.DS_Store
+Thumbs.db
+
+# editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# scratch, temp & debug artifacts
+_*/
+_*.png
+tmp-*/
+tmp-*.*
+debug-*.log
+*.tmp
+patch-*.mjs
+helm-phase*.mjs
+
+# AI Studio / tooling leftovers
+.aistudio/
+metadata.json

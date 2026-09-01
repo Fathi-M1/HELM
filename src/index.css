@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-surface: #071317;
+    --color-surface-dim: #050d10;
+    --color-surface-bright: #1b262a;
+    --color-surface-container-lowest: #03080a;
+    --color-surface-container-low: #0a171c;
+    --color-surface-container: #0f1d22;
+    --color-surface-container-high: #16262d;
+    --color-surface-container-highest: #1e313a;
+    --color-on-surface: #dee4e3;
+    --color-on-surface-variant: #9ab3b2;
+    --color-outline: #6b8584;
+    --color-outline-variant: #26383e;
+    --color-primary: #60d8d8;
+    --color-on-primary: #003737;
+    --color-primary-container: #02a0a0;
+    --color-secondary: #fcba62;
+    --color-tertiary: #ffb692;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #071317;
+    color: #dee4e3;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+  }
+
+  /* Scientific Monospace Typography */
+  .font-mono-data {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    letter-spacing: -0.02em;
+  }
+
+  /* Custom Instrument Scrollbars */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #071317;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1e313a;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #02a0a0;
+  }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinReverseSlow {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+@keyframes radarSweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 32s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 22s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-radar-sweep {
+  animation: radarSweep 6s linear infinite;
+}
+
